@@ -13,12 +13,4 @@ jobs:
           BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           CHANNEL_ID: ${{ secrets.TELEGRAM_CHANNEL_ID }}
         run: |
-          MESSAGE="🔥 Deal Discounter Test Deal
-
-This is our first automated deal post! 🚀
-
-👉 Check back soon for the best deals."
-
-          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
-            -d "chat_id=${CHANNEL_ID}" \
-            --data-urlencode "text=${MESSAGE}"
+          curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" -d "chat_id=${CHANNEL_ID}" --data-urlencode "text=🔥 Deal Discounter Test Deal - Our Telegram automation is working! 🚀"
